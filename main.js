@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function(event) {
+    var currentBG = "red";
+    var newBG = "";
+    document.querySelector("#changeColor").addEventListener('click', function(){ 
+        switch (currentBG) {
+            case "red":
+                newBG = "blue";
+            break;
+
+            case "blue":
+                newBG = "red";
+            break;
+        }
+
+        currentBG = newBG;
+        document.body.style.background = newBG;
+    });
+  });
+
+
 if ('serviceWorker' in navigator) {
     console.log('CLIENT: service worker registration in progress.');
     navigator.serviceWorker.register('serviceworker.js').then(function() {
@@ -8,12 +28,6 @@ if ('serviceWorker' in navigator) {
   } else {
     console.log('CLIENT: service worker is not supported.');
   }
-
-
-
-
-
-
 
 var deferredPrompt;
 
