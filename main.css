@@ -1,0 +1,15 @@
+body {
+    background-color: red;
+    color:white;;
+}
+
+.footer-prompt {
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    min-height:25px;
+    background-color:#333;
+    text-align: center;
+    display: none;;
+}
