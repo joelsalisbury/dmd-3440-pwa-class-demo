@@ -32,9 +32,9 @@ if ('serviceWorker' in navigator) {
 var deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', function (e) {
-    console.log("Boudda get an install prompt.");
+    console.log("Boudda show an install prompt.");
   // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
+  
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
 
