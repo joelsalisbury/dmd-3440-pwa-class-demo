@@ -12,7 +12,7 @@ var version = 'v4::';
    then the service worker won't be installed either.
 */
 var offlineFundamentals = [
-  '',
+  'index.html',
   'main.css',
   'main.js'
 ];
