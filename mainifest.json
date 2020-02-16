@@ -1,6 +1,6 @@
 {
-    "short_name": "My PWA Example for DMD 3440",
-    "name": "Example PWA!",
+    "short_name": "Turn Blue!",
+    "name": "Turn the page blue!",
     "icons": [
       {
         "src":"images/icon192.png",
