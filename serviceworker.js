@@ -5,14 +5,13 @@ console.log('SERVICE WORKER: executing.');
 /* A version number is useful when updating the worker logic,
    allowing you to remove outdated cache entries during the update.
 */
-var version = 'v5::';
+var version = 'v6::';
 
 /* These resources will be downloaded and cached by the service worker
    during the installation process. If any resource fails to be downloaded,
    then the service worker won't be installed either.
 */
 var offlineFiles = [
-  '/',
   'icon192.png',
   'icon512.png',
   'index.html',
@@ -136,7 +135,7 @@ self.addEventListener("fetch", function(event) {
         */
         function unableToResolve () {
           /* There's a couple of things we can do here.
-             - Test the Accept header and then return one of the `offlineFundamentals`
+             - Test the Accept header and then return one of the `offlineFiles`
                e.g: `return caches.match('/some/cached/image.png')`
              - You should also consider the origin. It's easier to decide what
                "unavailable" means for requests against your origins than for requests
