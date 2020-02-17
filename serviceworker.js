@@ -12,6 +12,7 @@ var version = 'v6::';
    then the service worker won't be installed either.
 */
 var offlineFiles = [
+  '',
   'icon192.png',
   'icon512.png',
   'index.html',
