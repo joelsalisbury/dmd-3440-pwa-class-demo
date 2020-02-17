@@ -1,6 +1,6 @@
 
 
-console.log('WORKER: executing.');
+console.log('SERVICE WORKER: executing.');
 
 /* A version number is useful when updating the worker logic,
    allowing you to remove outdated cache entries during the update.
