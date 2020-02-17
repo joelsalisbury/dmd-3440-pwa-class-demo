@@ -11,7 +11,10 @@ var version = 'v4::';
    during the installation process. If any resource fails to be downloaded,
    then the service worker won't be installed either.
 */
-var offlineFundamentals = [
+var offlineFiles = [
+  '/',
+  'icon192.png',
+  'icon512.png',
   'index.html',
   'main.css',
   'main.js'
@@ -38,10 +41,10 @@ self.addEventListener("install", function(event) {
       .open(version + 'fundamentals')
       .then(function(cache) {
         /* After the cache is opened, we can fill it with the offline fundamentals.
-           The method below will add all resources in `offlineFundamentals` to the
+           The method below will add all resources in `offlineFiles` to the
            cache, after making requests for them.
         */
-        return cache.addAll(offlineFundamentals);
+        return cache.addAll(offlineFiles);
       })
       .then(function() {
         console.log('WORKER: install completed');
